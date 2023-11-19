@@ -1,7 +1,83 @@
 
+/* navbar */
+.nav {
+    background-color: rgb(15, 15, 16) !important;
+    
+
+}
+
+/* header */
+
 .header {
-    background-image: url(./../../public/media/h.jpg);
+    background-image: url(./../../public/media/h4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* height: calc(100vh - 56px);
+    margin-top: 56px */
+    
 }
+
+.h1-h {
+    color: rgb(8, 8, 8);
+    letter-spacing: 30px;
+    font-size:100px;
+    font-weight: bold;
+    
+
+}
+
+.h1-home {
+    height: 100px;
+}
+/* img-index */
+
+.img-index {
+    background-image: url(./../../public/media/prova\ 6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh ;
+
+}
+/* img-edit */
+
+.img-edit {
+    background-image: url(./../../public/media/prova\ 6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh ;
+}
+
+/* register */
+
+.img-register{
+    background-image: url(./../../public/media/prova3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh ;
+}
+/* login */
+
+.img-login {
+    background-image: url(./../../public/media/login.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh ;
+}
+    
+/* card-index */
+.card-index {
+    border-radius: 15px;
+}
+
+/* btn1 */
+.btn1 {
+    border-radius: 25px;
+    
+    
+}
+

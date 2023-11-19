@@ -31,3 +31,6 @@ Route::put('/game/update/{game}', [GameController::class,'update'])->name('game.
 
 // rotta per la cancellazione 
 Route::delete('/game/delete{game}',[GameController::class, 'destroy'])->name('game.destroy');
+
+// rotta per il filtro per categoria
+Route::get('/games/category/{category}',[GameController::class,'filterByCategory'])->name('game.filterByCategory');

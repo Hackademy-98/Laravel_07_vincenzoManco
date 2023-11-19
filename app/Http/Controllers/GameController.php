@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\GameStoreRequest;
 
 class GameController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     /**
     * Display a listing of the resource.
     */
@@ -22,7 +27,8 @@ class GameController extends Controller
     */
     public function create()
     {
-        return view('game.create');
+        $categories = Category::all();
+        return view('game.create',compact("categories"));
     }
     
     /**
@@ -35,6 +41,7 @@ class GameController extends Controller
             "title" => $request->title,
             "description" => $request->description,
             "price" => $request->price,
+            "category_id" => $request->category,
             "img" => $file ? $file->store('public/images') : "public/images/default.png"
             
         ]);
@@ -78,7 +85,15 @@ class GameController extends Controller
     public function destroy(Game $game)
     {
         $game->delete();
-
+        
         return redirect()->route("game.index")->with("success","Il gioco è stato eliminato con successo");
     }
+    
+    /*
+    Filtra i giochi in base a una categoria selezionata
+    */
+    public function filterByCategory(Category $category){
+        return view('game.filterByCategory',compact("category"));
+    }
+    
 }

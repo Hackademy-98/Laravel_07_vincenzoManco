@@ -1,6 +1,6 @@
 <x-layout> 
     <div class="container">
-        <div class="row">
+        <div class="row p-5">
             <div class="col-12">
                 <h1 class="text-center">{{$game->title}} </h1>
             </div>
